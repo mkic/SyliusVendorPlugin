@@ -10,13 +10,15 @@ Odiseo\SyliusVendorPlugin\Model\Vendor:
     fields:
         name:
             type: string
+        category:
+            type: string
         slug:
             type: string
             unique: true
             gedmo:
-               slug:
-                   fields: [name]
-                   unique: true
+                slug:
+                    fields: [name]
+                    unique: true
         email:
             type: string
         logoName:
