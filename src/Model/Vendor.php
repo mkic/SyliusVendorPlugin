@@ -42,6 +42,9 @@ class Vendor implements VendorInterface
     /** @var string */
     protected $logoName;
 
+    /** @var string */
+    protected $category;
+
     public function __construct()
     {
         $this->initializeTranslationsCollection();
@@ -268,4 +271,22 @@ class Vendor implements VendorInterface
     {
         return $this->name;
     }
+
+    /**
+     * @return string
+     */
+    public function getCategory(): string
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param string $category
+     */
+    public function setCategory(string $category): void
+    {
+        $this->category = $category;
+    }
+
+
 }

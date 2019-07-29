@@ -24,6 +24,9 @@ class VendorType extends AbstractResourceType
             ->add('name', TextType::class, [
                 'label' => 'sylius.ui.name',
             ])
+            ->add('category', TextType::class, [
+                'label' => 'Category',
+            ])
             ->add('enabled', CheckboxType::class, [
                 'label' => 'sylius.ui.enabled',
             ])
@@ -35,7 +38,7 @@ class VendorType extends AbstractResourceType
                 'label' => 'odiseo_sylius_vendor.form.vendor.email',
             ])
             ->add('logoFile', FileType::class, [
-                 'label' => 'odiseo_sylius_vendor.form.vendor.logo',
+                'label' => 'odiseo_sylius_vendor.form.vendor.logo',
             ])
             ->add('channels', ChannelChoiceType::class, [
                 'multiple' => true,
