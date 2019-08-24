@@ -30,6 +30,9 @@ trait VendorsTrait
      */
     public function addVendor(VendorInterface $vendor)
     {
+        if (!$this->vendors) {
+            $this->vendors = new ArrayCollection();
+        }
         if (!$this->vendors->contains($vendor)) {
             $this->vendors->add($vendor);
         }
